@@ -58,13 +58,18 @@ columns of `cplx`:
 Stink={}
 
 Stink[('sced','cplx')] = Stink[('sced','time')] = [
- [0,0,0,1,2,4],
- [0,0,0,0,1,2],
- [0,0,0,0,0,1],
- [0,0,0,0,0,0],
- [0,0,0,0,0,0],
- [0,0,0,0,0,0]]
+ 
+ cplx (small-> large) 
+ -------------->      
+s| [0,0,0,1,2,4],
+c| [0,0,0,0,1,2],
+e| [0,0,0,0,0,1],
+d| [0,0,0,0,0,0],
+ | [0,0,0,0,0,0],
+ V [0,0,0,0,0,0]]
 
+(**this matrix means scheduled time is limited, but the complexity of project is high)
+(**this matrix means scheduled time is limited, but execution time constraint is high)
 """
 
 The rest of the tables have the same form:  there is one corner of the table where the stink is worse (rises to "2"). And if the stink is really bad, the
