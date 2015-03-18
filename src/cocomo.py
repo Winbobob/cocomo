@@ -164,30 +164,30 @@ But there is more to it that just size.
   exponentially by some _scale factors_ (`sf`).
 
 ```
-scale          | Prec |  have we done this before?
-factors        | Flex |  development flexibility 
-(exponentially | Resl |  any risk resolution activities?
- decrease      | Team |  team cohesion
- effort)       | Pmat |  process maturity
+scale          | Prec |  Precedentedness--have we done this before?
+factors        | Flex |  Development Flexibility 
+(exponentially | Resl |  Risk Resolution
+ decrease      | Team |  Team Cohesion
+ effort)       | Pmat |  Process Maturity
 ------------------------------------------------------------
-upper          | acap |  analyst capability
-(linearly      | pcap |  programmer capability
- decrease      | pcon |  programmer continuity
- effort)       | aexp |  analyst experience
-               | pexp |  programmer experience
-               | ltex |  language and tool experience
-               | tool |  use of tools
-               | site |  multiple site development
-               | sced |  length of schedule   
+upper          | acap |  Analyst Capability
+(linearly      | pcap |  Programmer Capability
+ decrease      | pcon |  Programmer Continuity
+ effort)       | aexp |  Analyst Experience
+               | pexp |  Programmer Experience
+               | ltex |  Language and Tool Experience
+               | tool |  Use of Software Tools
+               | site |  Multisite Development
+               | sced |  Required development schedule   
 -----------------------------------------------------------
-lower          | rely |  required reliability  
-(linearly      | data |  secondary memory  storage requirements
- increase      | cplx |  program complexity
- effort)       | ruse |  software reuse
-               | docu |  documentation requirements
-               | time |  runtime pressure
-               | stor |  main memory requirements
-               | pvol |  platform volatility  
+lower          | rely |  Required Software Reliability  
+(linearly      | data |  Database Size
+ increase      | cplx |  Program Complexity
+ effort)       | ruse |  Software Reusability
+               | docu |  Documentation Requirements
+               | time |  Execution Time Constraint
+               | stor |  Main Storage Constraint
+               | pvol |  Platform Volatility  
 ```
 
 __LESSON 2__ : The factors that effect delivery are not just
