@@ -58,13 +58,18 @@ columns of `cplx`:
 Stink={}
 
 Stink[('sced','cplx')] = Stink[('sced','time')] = [
- [0,0,0,1,2,4],
- [0,0,0,0,1,2],
- [0,0,0,0,0,1],
- [0,0,0,0,0,0],
- [0,0,0,0,0,0],
- [0,0,0,0,0,0]]
+ 
+ cplx (small-> large) 
+ -------------->      
+s| [0,0,0,1,2,4],
+c| [0,0,0,0,1,2],
+e| [0,0,0,0,0,1],
+d| [0,0,0,0,0,0],
+ | [0,0,0,0,0,0],
+ V [0,0,0,0,0,0]]
 
+(**this matrix means scheduled time is limited, but the complexity of project is high)
+(**this matrix means scheduled time is limited, but execution time constraint is high)
 """
 
 The rest of the tables have the same form:  there is one corner of the table where the stink is worse (rises to "2"). And if the stink is really bad, the
@@ -168,8 +173,11 @@ Here's the bad smells seen in 1000 randomly generated projects. Note that
 >>>  sample(projects=[flight,ground,osp,osp2,anything],
             score=badSmell)
 
-rank | rx                        | median  |                                                                             
-==== | ==                        | ======= |                                                                             
+          project   treatment
+            |          |
+            |          |
+rank | rx   |          |         | median  |                                                                             
+==== | ==   V          V         | ======= |                                                                             
 1    | ('ground', 'doNothing')   |     4.0 | ( -*            |              ),    0.0,     2.0,     4.0,     6.0,    14.0
 2    | ('osp2', 'doNothing')     |     5.0 | (  -*           |              ),    4.0,     4.0,     5.0,     6.0,     8.0
 3    | ('flight', 'doNothing')   |     8.0 | (   -*--        |              ),    0.0,     5.0,     8.0,    12.0,    32.0
@@ -279,5 +287,5 @@ rank | rx                                                          | median  |
 3    | ('anything', 'increaseArchitecturalAnalysisRiskResolution') |     9.0 | (  ---*--       |              ),    0.0,     4.0,     9.0,    15.0,    35.0
 3    | ('anything', 'reduceFunctionality')                         |     9.0 | (   --*--       |              ),    0.0,     5.0,     9.0,    15.0,    34.0
 ```
-
+(** My(zhewei) opinion: It seems that "improvePersonnel" is the most useful way to elimate bad smell.)
 """
