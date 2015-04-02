@@ -409,6 +409,12 @@ def improveTeam(): return dict(
 @rx
 def reduceQuality():  return dict(
   rely = [1], docu=[1], time = [3], cplx = [1])
+
+@rx
+def hw3_1():  return dict(
+  #hw3-1 => Team = [1], acap = [1], aexp = [4], Pmat = [4], sced = [1]
+  #hw3-2 => Team = [1], acap = [1], aexp = [4], Pmat = [1], sced = [3])
+  Team = [1], pexp = [4], Pmat = [4], sced = [3])
 """
 
 ### Under the Hood: Complete-ing the Ranges.
